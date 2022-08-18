@@ -1,0 +1,15 @@
+{
+  "name": "01festivalmusicaudemyjpdltv",
+  "version": "1.0.0",
+  "description": "Proeyecto con Sass, Gulp y HTML",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Sass",
+    "Gulp"
+  ],
+  "author": "Ernesto Moreno Vargas",
+  "license": "ISC"
+}
