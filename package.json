@@ -13,6 +13,7 @@
   "author": "Ernesto Moreno Vargas",
   "license": "ISC",
   "devDependencies": {
+    "gulp": "^4.0.2",
     "sass": "^1.54.4"
   }
 }
