@@ -1,3 +1,5 @@
+@use 'base/variables' as v;
+
 body{
-    background-color: $rojo;
+    background-color: v.$rojo;
 }
