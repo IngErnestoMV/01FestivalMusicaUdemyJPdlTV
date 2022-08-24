@@ -18,9 +18,3 @@
     }
 }
 
-.prueba{
-    @include m.heading(v.$amarillo, true);
-}
-.texto{
-    @include m.heading;
-}
