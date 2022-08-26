@@ -14,7 +14,7 @@ function css(done){
     src("src/scss/**/*.scss")    //Identificar el archivo de SASS
         .pipe(plumber())
         .pipe(sass())    //Compilarlo
-        .pipe(dest("build/css"))    //Almacenarla en el disco duro
+        .pipe(dest("build/css"));    //Almacenarla en el disco duro
 
 
     done();//call back que avisa a gulp cuando llegamos al funal de la función.
@@ -25,7 +25,7 @@ function imagenes(done){
     }
     src('src/img/**/*.{png,jpg}')
         .pipe(cache(imagemin(opciones)))
-        .pipe(dest('build/img'))
+        .pipe(dest('build/img'));
     
     done();
 }
@@ -36,7 +36,7 @@ function versionWebp(done){
     };
     src('src/img/**/*.{png,jpg}')
         .pipe(webp(opciones))
-        .pipe(dest('build/img'))
+        .pipe(dest('build/img'));
     done();
 }
 function versionAvif(done){
@@ -45,17 +45,25 @@ function versionAvif(done){
     };
     src('src/img/**/*.{png,jpg}')
         .pipe(avif(opciones))
-        .pipe(dest('build/img'))
+        .pipe(dest('build/img'));
+    done();
+}
+
+function javaScript(done){
+    src('src/js/**/*.js')
+        .pipe(dest('build/js'));
     done();
 }
 
 function dev(done){
-    watch("src/scss/**/*.scss", css)
-    done()
+    watch("src/scss/**/*.scss", css);
+    watch("src/js/**/*.js", javaScript);
+    done();
 }
 
 exports.css = css;
+exports.javaScript = javaScript;
 exports.imagenes = imagenes;
 exports.versionWebp = versionWebp;
 exports.versionAvif = versionAvif;
-exports.dev = parallel(imagenes, versionWebp, versionAvif, dev);
+exports.dev = parallel(imagenes, versionWebp, versionAvif, javaScript, dev);
