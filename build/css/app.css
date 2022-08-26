@@ -492,7 +492,7 @@ img {
 }
 .lineup .dia {
   text-transform: uppercase;
-  margin-bottom: 5rem;
+  margin: 5rem 0;
 }
 
 @media (min-width: 768px) {
@@ -505,10 +505,11 @@ img {
 .escenarios-contenedor p {
   color: #000000;
 }
-.escenarios-contenedor .escenario {
+
+.escenario {
   padding-top: 2rem;
 }
-.escenarios-contenedor .escenario p::after {
+.escenario p::after {
   content: "";
   display: block;
   width: 20rem;
@@ -518,17 +519,38 @@ img {
   background-position: center center;
   margin: 2rem auto 0 auto;
 }
-.escenarios-contenedor .edm .nombre-escenario:after {
+
+.edm .nombre-escenario:after {
   background-image: url(../img/icono_edm.png);
 }
-.escenarios-contenedor .rock .nombre-escenario:after {
+
+.rock .nombre-escenario:after {
   background-image: url(../img/icono_rock.png);
+}
+
+.calendario {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.calendario li {
+  padding: 2.5rem;
+  font-weight: 700;
+}
+.calendario span {
+  font-weight: 400;
 }
 
 .bg-amarillo {
   background-color: #fef46d;
 }
+.bg-amarillo li:nth-child(odd) {
+  background-color: #fef03a;
+}
 
 .bg-aqua {
   background-color: #4cb8b3;
+}
+.bg-aqua li:nth-child(odd) {
+  background-color: #3b9691;
 }

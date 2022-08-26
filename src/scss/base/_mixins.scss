@@ -29,3 +29,8 @@
     grid-template-columns: repeat($columnas, $fracciones);
     gap: $espaciado;
 }
+@mixin reset-lista(){
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
