@@ -327,7 +327,8 @@ body.fijar-body {
 }
 
 p {
-  font-size: 2 rem;
+  font-size: 2rem;
+  color: #000000;
   line-height: 1.5;
 }
 
