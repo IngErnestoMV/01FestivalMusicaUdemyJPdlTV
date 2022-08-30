@@ -3,9 +3,23 @@ document.addEventListener('DOMContentLoaded', function(){
 });
 
 function iniciarGaleria(){
+    aparecerNavFija();
     crearGaleria();
     scrollNav();
 };
+function aparecerNavFija(){
+    // selecciona elemento clase
+    const barra = document.querySelector('.header')
+    const sobreFestival = document.querySelector('.sobre-festival')
+    //Escucha scroll
+    window.addEventListener('scroll', function(){
+        if(sobreFestival.getBoundingClientRect().bottom<0){
+            barra.classList.add('fijo');
+        } else{
+            barra.classList.remove('fijo');
+        }
+    });
+}
 
 function scrollNav() {
     const enlaces = document.querySelectorAll('.navegacion-principal a');

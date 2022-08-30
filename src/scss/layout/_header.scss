@@ -3,12 +3,19 @@
 
 .header{
     background-color: v.$aqua;
+    &.fijo{
+        position: fixed;
+        width: 100%;
+        box-shadow: 0.1rem 0.2rem 0.3rem #333;
+    }
     h1{
+        text-shadow: 0.1rem 0.2rem 0.3rem #333;
         @include m.tablet {
             margin: 0;
         }
         color: v.$blanco;
         text-align: center;
+        
     }
     .contenido-header{
         padding: 2rem;
